@@ -12,7 +12,7 @@ import (
 	"github.com/markbates/goth/providers/github"
 	"github.com/markbates/goth/providers/gitlab"
 
-	"./dotenv"
+	"github.com/connctd/netlify-cms-oauth-provider-go/dotenv"
 )
 
 var (
@@ -150,6 +150,6 @@ func main() {
 	//
 	http.Handle("/", router)
 	//
-	fmt.Printf("Started running on %s\n", host)
-	fmt.Println(http.ListenAndServe(host, nil))
+	fmt.Printf("Started running on %s\n", "localhost:3000")
+	fmt.Println(http.ListenAndServe(":3000", nil))
 }
